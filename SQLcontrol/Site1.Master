@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="SQLcontrol.Site1" %>
+
+<%@ Register Src="~/ucHeader.ascx" TagPrefix="uc1" TagName="ucHeader" %>
+<%@ Register Src="~/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
+<%@ Register Src="~/ucLeft.ascx" TagPrefix="uc1" TagName="ucLeft" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
+
+<body>
+    <form id="form1" runat="server">
+        <uc1:ucHeader runat="server" ID="ucHeader" />
+        <uc1:ucLeft runat="server" ID="ucLeft" />
+        <div class="container2">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div></div>
+        <uc1:ucFooter runat="server" ID="ucFooter" />
+    </form>
+</body>
+</html>

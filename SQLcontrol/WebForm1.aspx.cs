@@ -32,13 +32,8 @@ namespace SQLcontrol
             string idn=this.IDN.Text;
             string password = this.Password.Text;
             string email = this.Email.Text;
-            string phone = this.Phone.Text;
-            string education = this.Education.Text;
-            string school = this.School.Text;
-            string department = this.Department.Text;
-            string exp = this.Exp.Text;
-            string expyear = this.Expyear.Text;
-            DataBaseExecutor.InsertTestTablel(fn,ln,birthday,sex,address,idn,password,email,phone,education,school,department,exp,expyear);
+
+            DataBaseExecutor.InsertTestTablel(fn,ln,birthday,sex,address,idn,password,email);
         }
 
         protected  void Button3_Click(object sender, EventArgs e)
@@ -51,14 +46,9 @@ namespace SQLcontrol
             string idn = this.IDN.Text;
             string password = this.Password.Text;
             string email = this.Email.Text;
-            string phone = this.Phone.Text;
-            string education = this.Education.Text;
-            string school = this.School.Text;
-            string department = this.Department.Text;
-            string exp = this.Exp.Text;
-            string expyear = this.Expyear.Text;
+
             DataBaseExecutor.UpdateTestTablel(fn, ln, birthday, sex, address, idn, password, 
-                email, phone, education, school, department, exp, expyear);
+                email);
         }
 
         protected void Button4_Click(object sender, EventArgs e)

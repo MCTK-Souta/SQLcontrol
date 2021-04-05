@@ -9,8 +9,8 @@
     台北辦公室:02-xxxxxxxx &nbsp&nbsp&nbsp&nbsp 地址:xxxxxxxxxx<br />
             </asp:TableCell>
             <asp:TableCell HorizontalAlign="Right">
-                <a href="WebForm2.aspx">隱私權宣告</a><br />
-                <a href="WebForm2.aspx">資料保護宣言</a>
+                <a href="Privacy.aspx">隱私權宣告</a><br />
+                <a href="https://pairlabs.ai/wp-content/uploads/2020/07/%E6%9C%AC%E6%A0%A1%E5%80%8B%E4%BA%BA%E8%B3%87%E6%96%99%E4%BF%9D%E8%AD%B7%E6%9A%A8%E8%B3%87%E8%A8%8A%E5%AE%89%E5%85%A8%E5%AE%A3%E8%A8%80-1.pdf">資料保護宣言</a>
             </asp:TableCell>
         </asp:TableRow>
     </asp:Table>

@@ -87,6 +87,7 @@
     <Content Include="index.html" />
     <Content Include="Login.aspx" />
     <Content Include="main.css" />
+    <Content Include="Privacy.aspx" />
     <Content Include="test.aspx" />
     <Content Include="testWebForm3.aspx" />
     <Content Include="ucFooter.ascx" />
@@ -108,6 +109,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site1.Master.cs">

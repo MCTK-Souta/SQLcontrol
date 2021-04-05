@@ -10,18 +10,15 @@ namespace SQLcontrol
     public class DataBaseExecutor 
     {
         public static void InsertTestTablel(string fn, string ln, string birthday, string sex,string address //新增
-            , string idn,string password,string email,string phone,string education
-            ,string school,string department,string exp,string expyear) 
+            , string idn,string password,string email) 
         {
-            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=Course registration; Integrated Security=true";
+            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=CSharpLession; Integrated Security=true";
 
             string queryString =
                 $@"INSERT INTO student_region
-                    (StudentFirstName,StudentLastName,Birthday,Sex,Address,IDN,Password,Email,
-                     Phone,Education,School,Department,Exp,Expyear)
+                    (StudentFirstName,StudentLastName,Birthday,Sex,Address,IDN,Password,Email)
                 VALUES
-                    (@StudentFirstName,@StudentLastName,@Birthday,@Sex,@Address,@IDN,@Password,@Email,
-                     @Phone,@Education,@School,@Department,@Exp,@Expyear);";
+                    (@StudentFirstName,@StudentLastName,@Birthday,@Sex,@Address,@IDN,@Password,@Email);";
 
             using (SqlConnection connection = new SqlConnection(connectionstring))
             {
@@ -34,12 +31,6 @@ namespace SQLcontrol
                 command.Parameters.AddWithValue("@IDN", idn);
                 command.Parameters.AddWithValue("@Password", password);
                 command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Phone", phone);
-                command.Parameters.AddWithValue("@Education", education);
-                command.Parameters.AddWithValue("@School", school);
-                command.Parameters.AddWithValue("@Department", department);
-                command.Parameters.AddWithValue("@Exp", exp);
-                command.Parameters.AddWithValue("@Expyear", expyear);
 
 
                 try
@@ -58,7 +49,7 @@ namespace SQLcontrol
         public static DataTable ReadTestTable1DT(string IDN) //查詢身分證
         {
             string connectionstring =
-                "Data Source=localhost\\SQLExpress;Initial Catalog=Course registration; Integrated Security=true";
+                "Data Source=localhost\\SQLExpress;Initial Catalog=CSharpLession; Integrated Security=true";
 
             string queryString =
                 $@" SELECT * FROM student_region
@@ -132,7 +123,7 @@ namespace SQLcontrol
 
         public static void DeleteTestTablel(string idn) //刪除
         {
-            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=Course registration; Integrated Security=true";
+            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=CSharpLession; Integrated Security=true";
 
             string queryString =
                 $@"DELETE FROM student_region WHERE IDN=@IDN";
@@ -157,15 +148,14 @@ namespace SQLcontrol
         } 
 
         public static void UpdateTestTablel(string fn, string ln, string birthday, string sex, string address //新增
-            , string idn, string password, string email, string phone, string education
-            , string school, string department, string exp, string expyear) //修改
+            , string idn, string password, string email) //修改
         {
-            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=Course registration; Integrated Security=true";
+            string connectionstring = "Data Source=localhost\\SQLExpress;Initial Catalog=CSharpLession; Integrated Security=true";
 
             string queryString =
                 $@"UPDATE  student_region SET
-                    StudentFirstName=@StudentFirstName,StudentLastName=@StudentLastName,Birthday=@Birthday,Sex=@Sex,Address=@Address,IDN=@IDN,Password=@Password,Email=@Email,
-                    Phone=@Phone,Education=@Education,School=@School,Department=@Department,Exp=@Exp,Expyear=@Expyear
+                    StudentFirstName=@StudentFirstName,StudentLastName=@StudentLastName,Birthday=@Birthday,Sex=@Sex,
+                    Address=@Address,IDN=@IDN,Password=@Password,Email=@Email,
                 WHERE
                     IDN=@IDN;";
 
@@ -180,12 +170,6 @@ namespace SQLcontrol
                 command.Parameters.AddWithValue("@IDN", idn);
                 command.Parameters.AddWithValue("@Password", password);
                 command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Phone", phone);
-                command.Parameters.AddWithValue("@Education", education);
-                command.Parameters.AddWithValue("@School", school);
-                command.Parameters.AddWithValue("@Department", department);
-                command.Parameters.AddWithValue("@Exp", exp);
-                command.Parameters.AddWithValue("@Expyear", expyear);
 
                 try
                 {
